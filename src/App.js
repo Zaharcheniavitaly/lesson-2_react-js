@@ -36,10 +36,6 @@ setTimeout(()=>{
 	}
 }, [messageList])
 
-	// const messData = {
-	// 	messText: 'Привет, ROBOT, очень сложно идет изучение React!!!'
-	// }
-
 
 	return (
 	<div className="app">
@@ -49,10 +45,10 @@ setTimeout(()=>{
 
 		<Form data={messageBody} setData = {setMessageBody} setMessage = {setMessageList}></Form>
 
-   <div className="messageList">
+   <div>
       {
-		messageList.map((mess, i) => <Message  key={i}
-		author={mess.author} text={mess.text} />		  
+		messageList.map((mess, index) => <Message
+		author={mess.author} text={mess.text} key={index} />		  
 	)}
 			</div>
 		</div>
