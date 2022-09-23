@@ -7,11 +7,11 @@ import Message from "./Components/Message";
 function App() {
 
 	const [messageList, setMessageList] = useState([{
-		id: '1',
+		id: 1,
 		author: 'Vitaly',
 		text: 'Привет, Verber, очень сложно идет изучение React!!!'
 	}, {
-		id: '2',
+		id: 2,
 		author: '',
 		text: ''
 	}]);
