@@ -4,11 +4,11 @@ import './Message.css';
 
 
 
-function Message({ author, text }) {	
+function Message(props) {	
 		return(
 			<div className='message-class'>
-			<h1 className='text-class-name'>{author}</h1>
-			<p className='text-class'>{text}</p>
+			<h1 className='text-class-name'>{props.author}</h1>
+			<p className='text-class'>{props.text}</p>
 			</div>
 		)
 	}

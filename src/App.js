@@ -7,11 +7,11 @@ import Message from "./Components/Message";
 function App() {
 
 	const [messageList, setMessageList] = useState([{
-		id: 1,
+		id: '1',
 		author: 'Vitaly',
 		text: 'Привет, Verber, очень сложно идет изучение React!!!'
 	}, {
-		id: 2,
+		id: '2',
 		author: '',
 		text: ''
 	}]);
@@ -36,6 +36,10 @@ setTimeout(()=>{
 	}
 }, [messageList])
 
+	// const messData = {
+	// 	messText: 'Привет, ROBOT, очень сложно идет изучение React!!!'
+	// }
+
 
 	return (
 	<div className="app">
@@ -45,10 +49,10 @@ setTimeout(()=>{
 
 		<Form data={messageBody} setData = {setMessageBody} setMessage = {setMessageList}></Form>
 
-   <div>
+   <div className="messageList">
       {
-		messageList.map((mess, index) => <Message
-		author={mess.author} text={mess.text} key={index} />		  
+		messageList.map((mess, i) => <Message  key={i}
+		author={mess.author} text={mess.text} />		  
 	)}
 			</div>
 		</div>
